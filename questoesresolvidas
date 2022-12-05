@@ -1,0 +1,39 @@
+Resolução das Questões:
+
+Equipe6
+
+max = int(input("Insira quantos alunos você deseja organizar em equipes: "))
+eq = int(input("Insira a quantidade de equipes que deseja criar: "))
+alunos = []
+
+for i in range(0,max):
+    alunos.append(input("Insira o nome do aluno: "))
+
+if (max%eq) == 0:
+    print(f"Os {max} alunos podem ser divididos em {eq} equipes, com cada equipe possuindo {(max/eq):.0f} integrantes.")
+else:
+    print(f"Os {max} alunos podem ser divididos em {eq} equipes.")
+    if (max%eq == 1):
+        print(f"Se as equipes possuirem {(max/eq):.0f} participantes, 1 vai ficar de fora.")
+    elif (max%eq > 1):
+        print(f"Se as equipes possuirem {(max/eq):.0f} participantes, {(max%eq):.0f} vai ficar de fora.")
+
+Equipe 3
+
+repetir = True
+while(repetir):
+    repetir = False
+
+    n = input("Insira um número inteiro de até 4 dígitos: ")
+    if n.isnumeric():
+        n2 = str(n)
+        n2 = n2[::-1]
+
+        print(f"{n} possui {len(n2[0])} unidades.")
+        print(f"{n} possui {len(n2[1])}0 dezenas.")
+        print(f"{n} possui {len(n2[2])}00 centenas.")
+        print(f"{n} possui {len(n2[3])}000 unidades de milhar.")
+    else:
+        print("Número inválido.")
+        repetir = True
+
